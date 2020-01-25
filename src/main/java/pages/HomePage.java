@@ -40,4 +40,12 @@ public class HomePage extends BasePage {
         click(loginButton);
         return new LoginPage(driver);
     }
+    
+    @Step("git test.----------------1.")
+    public HomePage demo() {
+    	
+        System.out.println("git test");
+		return this;
+    } 
+    
 }
