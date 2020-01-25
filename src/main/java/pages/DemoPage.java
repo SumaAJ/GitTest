@@ -20,4 +20,9 @@ public class DemoPage {
 		System.out.println("test3");
 	}
 	
+public void test4() {
+		
+		System.out.println("test4 + to test it in feature001 branch");
+	}
+	
 }
