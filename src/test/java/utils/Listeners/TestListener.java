@@ -40,21 +40,21 @@ public class TestListener extends BaseTest implements ITestListener {
 
     @Override
     public void onStart(ITestContext iTestContext) {
-        System.out.println("I am in onStart method " + iTestContext.getName());
-        iTestContext.setAttribute("WebDriver", this.driver);
+        //System.out.println("I am in onStart method " + iTestContext.getName());
+        //iTestContext.setAttribute("WebDriver", this.driver);
     }
 
     @Override
     public void onFinish(ITestContext iTestContext) {
-        System.out.println("I am in onFinish method " + iTestContext.getName());
+        //System.out.println("I am in onFinish method " + iTestContext.getName());
         //Do tier down operations for extentreports reporting!
-        ExtentTestManager.endTest();
-        ExtentManager.getReporter().flush();
+        //ExtentTestManager.endTest();
+        //ExtentManager.getReporter().flush();
     }
 
     @Override
     public void onTestStart(ITestResult iTestResult) {
-        System.out.println("I am in onTestStart method " +  getTestMethodName(iTestResult) + " start");
+       // System.out.println("I am in onTestStart method " +  getTestMethodName(iTestResult) + " start");
         Log.info(getTestMethodName(iTestResult) + " test is starting.");
         //Start operation for extentreports.
         ExtentTestManager.startTest(iTestResult.getMethod().getMethodName(),"");
@@ -104,5 +104,7 @@ public class TestListener extends BaseTest implements ITestListener {
     public void onTestFailedButWithinSuccessPercentage(ITestResult iTestResult) {
         System.out.println("Test failed but it is in defined success ratio " + getTestMethodName(iTestResult));
     }
+
+	
 
 }
