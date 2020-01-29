@@ -7,5 +7,10 @@ public class DemoPage1 {
 		System.out.println("test6");
 	}
 	
+public void test7() {
+		
+		System.out.println("test7");
+	}
+	
 	
 }
